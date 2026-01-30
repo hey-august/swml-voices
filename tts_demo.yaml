@@ -1,0 +1,503 @@
+version: 1.0.0
+sections:
+  main:
+    # ── Introduction ──────────────────────────────────────────────
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "say:Welcome to the SignalWire T T S demo. You will now hear every text to speech provider and model available on the SignalWire platform. Let's begin."
+          - "silence:1.0"
+
+    - execute:
+        dest: amazon_polly
+    - execute:
+        dest: google_cloud
+    - execute:
+        dest: microsoft_azure
+    - execute:
+        dest: elevenlabs
+    - execute:
+        dest: openai
+    - execute:
+        dest: deepgram
+    - execute:
+        dest: rime
+
+    # ── Outro ─────────────────────────────────────────────────────
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "silence:1.0"
+          - "say:That concludes the SignalWire T T S demo. You just heard voices from Amazon Polly, Google Cloud, Microsoft Azure, Eleven Labs, Open A I, Deepgram, and Rime. Thanks for listening!"
+
+  # ================================================================
+  #  AMAZON POLLY
+  # ================================================================
+  amazon_polly:
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "say:Provider one. Amazon Polly. Three models available: Standard, Neural, and Generative."
+          - "silence:0.5"
+
+    # -- Standard --
+    - play:
+        say_voice: "amazon.Salli:standard:en-US"
+        url: "say:Hi, I'm Salli, an Amazon Polly Standard voice."
+    - play:
+        say_voice: "amazon.Joey:standard:en-US"
+        url: "say:Hi, I'm Joey, an Amazon Polly Standard voice."
+    - play:
+        say_voice: "amazon.Emma:en-GB"
+        url: "say:Hello, I'm Emma, an Amazon Polly Standard voice speaking British English."
+    - play:
+        say_voice: "amazon.Aditi:standard:hi-IN"
+        url: "say:Hello, I'm Aditi, an Amazon Polly Standard voice."
+
+    # -- Neural --
+    - play:
+        say_voice: "amazon.Kendra:neural:en-US"
+        url: "say:Hi, I'm Kendra, an Amazon Polly Neural voice."
+    - play:
+        say_voice: "amazon.Ruth:neural:en-US"
+        url: "say:Hi, I'm Ruth, an Amazon Polly Neural voice."
+    - play:
+        say_voice: "amazon.Kevin:neural:en-US"
+        url: "say:Hi, I'm Kevin, an Amazon Polly Neural voice."
+    - play:
+        say_voice: "amazon.Matthew:neural:en-US"
+        url: "say:Hi, I'm Matthew, an Amazon Polly Neural voice."
+    - play:
+        say_voice: "amazon.Joanna:neural:en-US"
+        url: "say:Hi, I'm Joanna, an Amazon Polly Neural voice."
+    - play:
+        say_voice: "amazon.Ivy:neural:en-US"
+        url: "say:Hi, I'm Ivy, an Amazon Polly Neural voice."
+    - play:
+        say_voice: "amazon.Stephen:neural:en-US"
+        url: "say:Hi, I'm Stephen, an Amazon Polly Neural voice."
+
+    # -- Generative --
+    - play:
+        say_voice: "amazon.Danielle:generative:en-US"
+        url: "say:Hi, I'm Danielle, an Amazon Polly Generative voice. This is the most realistic Polly model."
+    - play:
+        say_voice: "amazon.Ruth:generative:en-US"
+        url: "say:Hi, I'm Ruth again, now using the Amazon Polly Generative model."
+    - play:
+        url: "silence:1.0"
+
+  # ================================================================
+  #  GOOGLE CLOUD
+  # ================================================================
+  google_cloud:
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "say:Provider two. Google Cloud. Models include Standard, Wave Net, Neural 2, and Polyglot."
+          - "silence:0.5"
+
+    # -- Standard --
+    - play:
+        say_voice: "gcloud.en-US-Standard-A"
+        url: "say:Hello, I'm a Google Cloud Standard voice, model A."
+    - play:
+        say_voice: "gcloud.en-US-Standard-B"
+        url: "say:Hello, I'm a Google Cloud Standard voice, model B."
+    - play:
+        say_voice: "gcloud.en-US-Standard-C"
+        url: "say:Hello, I'm a Google Cloud Standard voice, model C."
+    - play:
+        say_voice: "gcloud.en-US-Standard-D"
+        url: "say:Hello, I'm a Google Cloud Standard voice, model D."
+
+    # -- WaveNet --
+    - play:
+        say_voice: "gcloud.en-US-Wavenet-A"
+        url: "say:Hello, I'm a Google Cloud WaveNet voice, model A."
+    - play:
+        say_voice: "gcloud.en-US-Wavenet-B"
+        url: "say:Hello, I'm a Google Cloud WaveNet voice, model B."
+    - play:
+        say_voice: "gcloud.en-US-Wavenet-C"
+        url: "say:Hello, I'm a Google Cloud WaveNet voice, model C."
+    - play:
+        say_voice: "gcloud.en-US-Wavenet-D"
+        url: "say:Hello, I'm a Google Cloud WaveNet voice, model D."
+
+    # -- Neural2 --
+    - play:
+        say_voice: "gcloud.en-US-Neural2-A"
+        url: "say:Hello, I'm a Google Cloud Neural 2 voice, model A."
+    - play:
+        say_voice: "gcloud.en-US-Neural2-C"
+        url: "say:Hello, I'm a Google Cloud Neural 2 voice, model C."
+    - play:
+        say_voice: "gcloud.en-US-Neural2-D"
+        url: "say:Hello, I'm a Google Cloud Neural 2 voice, model D."
+    - play:
+        say_voice: "gcloud.en-US-Neural2-F"
+        url: "say:Hello, I'm a Google Cloud Neural 2 voice, model F."
+
+    # -- Polyglot --
+    - play:
+        say_voice: "gcloud.en-US-Polyglot-1"
+        url: "say:Hello, I'm a Google Cloud Polyglot voice. I can speak many languages."
+    - play:
+        url: "silence:1.0"
+
+  # ================================================================
+  #  MICROSOFT AZURE
+  # ================================================================
+  microsoft_azure:
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "say:Provider three. Microsoft Azure Neural voices."
+          - "silence:0.5"
+
+    - play:
+        say_voice: "azure.en-US-AvaNeural"
+        url: "say:Hello, I'm Ava, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-AndrewNeural"
+        url: "say:Hello, I'm Andrew, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-EmmaNeural"
+        url: "say:Hello, I'm Emma, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-BrianNeural"
+        url: "say:Hello, I'm Brian, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-JennyNeural"
+        url: "say:Hello, I'm Jenny, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-GuyNeural"
+        url: "say:Hello, I'm Guy, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-AriaNeural"
+        url: "say:Hello, I'm Aria, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-DavisNeural"
+        url: "say:Hello, I'm Davis, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-JaneNeural"
+        url: "say:Hello, I'm Jane, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-JasonNeural"
+        url: "say:Hello, I'm Jason, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-SaraNeural"
+        url: "say:Hello, I'm Sara, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-TonyNeural"
+        url: "say:Hello, I'm Tony, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-US-NancyNeural"
+        url: "say:Hello, I'm Nancy, a Microsoft Azure Neural voice."
+    - play:
+        say_voice: "azure.en-GB-SoniaNeural"
+        url: "say:Hello, I'm Sonia, a Microsoft Azure Neural voice speaking British English."
+    - play:
+        say_voice: "azure.en-GB-RyanNeural"
+        url: "say:Hello, I'm Ryan, a Microsoft Azure Neural voice speaking British English."
+    - play:
+        url: "silence:1.0"
+
+  # ================================================================
+  #  ELEVENLABS
+  # ================================================================
+  elevenlabs:
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "say:Provider four. Eleven Labs. Three models: Flash version 2 point 5, Version 3, and Multilingual version 2."
+          - "silence:0.5"
+
+    # -- eleven_flash_v2_5 (fast, low-latency) --
+    - play:
+        say_voice: "elevenlabs.Rachel:eleven_flash_v2_5"
+        url: "say:Hi, I'm Rachel on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Drew:eleven_flash_v2_5"
+        url: "say:Hi, I'm Drew on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Clyde:eleven_flash_v2_5"
+        url: "say:Hi, I'm Clyde on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Paul:eleven_flash_v2_5"
+        url: "say:Hi, I'm Paul on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Sarah:eleven_flash_v2_5"
+        url: "say:Hi, I'm Sarah on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Charlie:eleven_flash_v2_5"
+        url: "say:Hi, I'm Charlie on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Emily:eleven_flash_v2_5"
+        url: "say:Hi, I'm Emily on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Callum:eleven_flash_v2_5"
+        url: "say:Hi, I'm Callum on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Charlotte:eleven_flash_v2_5"
+        url: "say:Hi, I'm Charlotte on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Alice:eleven_flash_v2_5"
+        url: "say:Hi, I'm Alice on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Matilda:eleven_flash_v2_5"
+        url: "say:Hi, I'm Matilda on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.James:eleven_flash_v2_5"
+        url: "say:Hi, I'm James on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Daniel:eleven_flash_v2_5"
+        url: "say:Hi, I'm Daniel on ElevenLabs Flash v2.5."
+    - play:
+        say_voice: "elevenlabs.Lily:eleven_flash_v2_5"
+        url: "say:Hi, I'm Lily on ElevenLabs Flash v2.5."
+
+    # -- eleven_v3 (highest quality) --
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_v3"
+        url: "say:Hi, I'm Brian on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Grace:eleven_v3"
+        url: "say:Hi, I'm Grace on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.George:eleven_v3"
+        url: "say:Hi, I'm George on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Dorothy:eleven_v3"
+        url: "say:Hi, I'm Dorothy on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Liam:eleven_v3"
+        url: "say:Hi, I'm Liam on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Serena:eleven_v3"
+        url: "say:Hi, I'm Serena on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Adam:eleven_v3"
+        url: "say:Hi, I'm Adam on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Nicole:eleven_v3"
+        url: "say:Hi, I'm Nicole on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Bill:eleven_v3"
+        url: "say:Hi, I'm Bill on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Freya:eleven_v3"
+        url: "say:Hi, I'm Freya on ElevenLabs version 3."
+    - play:
+        say_voice: "elevenlabs.Giovanni:eleven_v3"
+        url: "say:Hi, I'm Giovanni on ElevenLabs version 3."
+
+    # -- eleven_multilingual_v2 --
+    - play:
+        say_voice: "elevenlabs.Rachel:eleven_multilingual_v2"
+        url: "say:Hi, I'm Rachel on ElevenLabs Multilingual v2."
+    - play:
+        say_voice: "elevenlabs.Josh:eleven_multilingual_v2"
+        url: "say:Hi, I'm Josh on ElevenLabs Multilingual v2."
+    - play:
+        say_voice: "elevenlabs.Arnold:eleven_multilingual_v2"
+        url: "say:Hi, I'm Arnold on ElevenLabs Multilingual v2."
+    - play:
+        say_voice: "elevenlabs.Gigi:eleven_multilingual_v2"
+        url: "say:Hi, I'm Gigi on ElevenLabs Multilingual v2."
+    - play:
+        say_voice: "elevenlabs.Mimi:eleven_multilingual_v2"
+        url: "say:Hi, I'm Mimi on ElevenLabs Multilingual v2."
+    - play:
+        url: "silence:1.0"
+
+  # ================================================================
+  #  OPENAI
+  # ================================================================
+  openai:
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "say:Provider five. Open A I. Two models: T T S 1, and T T S 1 H D. Six voices."
+          - "silence:0.5"
+
+    # -- tts-1 (standard, low-latency) --
+    - play:
+        say_voice: "openai.alloy:tts-1"
+        url: "say:Hi, I'm Alloy on OpenAI TTS-1."
+    - play:
+        say_voice: "openai.echo:tts-1"
+        url: "say:Hi, I'm Echo on OpenAI TTS-1."
+    - play:
+        say_voice: "openai.fable:tts-1"
+        url: "say:Hi, I'm Fable on OpenAI TTS-1."
+    - play:
+        say_voice: "openai.onyx:tts-1"
+        url: "say:Hi, I'm Onyx on OpenAI TTS-1."
+    - play:
+        say_voice: "openai.nova:tts-1"
+        url: "say:Hi, I'm Nova on OpenAI TTS-1."
+    - play:
+        say_voice: "openai.shimmer:tts-1"
+        url: "say:Hi, I'm Shimmer on OpenAI TTS-1."
+
+    # -- tts-1-hd (high definition) --
+    - play:
+        say_voice: "openai.alloy:tts-1-hd"
+        url: "say:Hi, I'm Alloy on OpenAI TTS-1 HD."
+    - play:
+        say_voice: "openai.echo:tts-1-hd"
+        url: "say:Hi, I'm Echo on OpenAI TTS-1 HD."
+    - play:
+        say_voice: "openai.fable:tts-1-hd"
+        url: "say:Hi, I'm Fable on OpenAI TTS-1 HD."
+    - play:
+        say_voice: "openai.onyx:tts-1-hd"
+        url: "say:Hi, I'm Onyx on OpenAI TTS-1 HD."
+    - play:
+        say_voice: "openai.nova:tts-1-hd"
+        url: "say:Hi, I'm Nova on OpenAI TTS-1 HD."
+    - play:
+        say_voice: "openai.shimmer:tts-1-hd"
+        url: "say:Hi, I'm Shimmer on OpenAI TTS-1 HD."
+    - play:
+        url: "silence:1.0"
+
+  # ================================================================
+  #  DEEPGRAM
+  # ================================================================
+  deepgram:
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "say:Provider six. Deepgram Aura voices."
+          - "silence:0.5"
+
+    - play:
+        say_voice: "deepgram.aura-asteria-en"
+        url: "say:Hello, I'm Asteria, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-luna-en"
+        url: "say:Hello, I'm Luna, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-stella-en"
+        url: "say:Hello, I'm Stella, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-athena-en"
+        url: "say:Hello, I'm Athena, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-hera-en"
+        url: "say:Hello, I'm Hera, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-orion-en"
+        url: "say:Hello, I'm Orion, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-arcas-en"
+        url: "say:Hello, I'm Arcas, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-perseus-en"
+        url: "say:Hello, I'm Perseus, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-angus-en"
+        url: "say:Hello, I'm Angus, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-orpheus-en"
+        url: "say:Hello, I'm Orpheus, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-helios-en"
+        url: "say:Hello, I'm Helios, a Deepgram Aura voice."
+    - play:
+        say_voice: "deepgram.aura-zeus-en"
+        url: "say:Hello, I'm Zeus, a Deepgram Aura voice."
+    - play:
+        url: "silence:1.0"
+
+  # ================================================================
+  #  RIME
+  # ================================================================
+  rime:
+    - play:
+        say_voice: "elevenlabs.Brian:eleven_flash_v2_5"
+        urls:
+          - "say:Provider seven. Rime. Three models: Mist, Mist v2, and Arcana."
+          - "silence:0.5"
+
+    # -- Mist v2 (default) --
+    - play:
+        say_voice: "rime.allison:mistv2"
+        url: "say:Hello, I'm Allison on Rime Mist v2."
+    - play:
+        say_voice: "rime.amber:mistv2"
+        url: "say:Hello, I'm Amber on Rime Mist v2."
+    - play:
+        say_voice: "rime.benjamin:mistv2"
+        url: "say:Hello, I'm Benjamin on Rime Mist v2."
+    - play:
+        say_voice: "rime.elena:mistv2"
+        url: "say:Hello, I'm Elena on Rime Mist v2."
+    - play:
+        say_voice: "rime.ember:mistv2"
+        url: "say:Hello, I'm Ember on Rime Mist v2."
+    - play:
+        say_voice: "rime.eva:mistv2"
+        url: "say:Hello, I'm Eva on Rime Mist v2."
+    - play:
+        say_voice: "rime.joy:mistv2"
+        url: "say:Hello, I'm Joy on Rime Mist v2."
+    - play:
+        say_voice: "rime.maya:mistv2"
+        url: "say:Hello, I'm Maya on Rime Mist v2."
+    - play:
+        say_voice: "rime.river:mistv2"
+        url: "say:Hello, I'm River on Rime Mist v2."
+    - play:
+        say_voice: "rime.storm:mistv2"
+        url: "say:Hello, I'm Storm on Rime Mist v2."
+    - play:
+        say_voice: "rime.violet:mistv2"
+        url: "say:Hello, I'm Violet on Rime Mist v2."
+    - play:
+        say_voice: "rime.willow:mistv2"
+        url: "say:Hello, I'm Willow on Rime Mist v2."
+    - play:
+        say_voice: "rime.spore:mistv2"
+        url: "say:Hello, I'm Spore on Rime Mist v2."
+
+    # -- Arcana (most expressive) --
+    - play:
+        say_voice: "rime.luna:arcana"
+        url: "say:Hello, I'm Luna on Rime Arcana."
+    - play:
+        say_voice: "rime.celeste:arcana"
+        url: "say:Hello, I'm Celeste on Rime Arcana."
+    - play:
+        say_voice: "rime.orion:arcana"
+        url: "say:Hello, I'm Orion on Rime Arcana."
+    - play:
+        say_voice: "rime.ursa:arcana"
+        url: "say:Hello, I'm Ursa on Rime Arcana."
+    - play:
+        say_voice: "rime.astra:arcana"
+        url: "say:Hello, I'm Astra on Rime Arcana."
+    - play:
+        say_voice: "rime.esther:arcana"
+        url: "say:Hello, I'm Esther on Rime Arcana."
+    - play:
+        say_voice: "rime.estelle:arcana"
+        url: "say:Hello, I'm Estelle on Rime Arcana."
+    - play:
+        say_voice: "rime.andromeda:arcana"
+        url: "say:Hello, I'm Andromeda on Rime Arcana."
+    - play:
+        say_voice: "rime.vespera:arcana"
+        url: "say:Hello, I'm Vespera on Rime Arcana."
+    - play:
+        say_voice: "rime.sirius:arcana"
+        url: "say:Hello, I'm Sirius on Rime Arcana."
+    - play:
+        say_voice: "rime.lyra:arcana"
+        url: "say:Hello, I'm Lyra on Rime Arcana."
+    - play:
+        say_voice: "rime.thalassa:arcana"
+        url: "say:Hello, I'm Thalassa on Rime Arcana."
